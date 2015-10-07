@@ -11,6 +11,7 @@ public class Test {
 		
 		TestSync ts = new TestSync(emap);
 		ts.runThreads();
+		emap.getExpire().startExpiringIfNotStarted();
 		T3 th = new T3(emap);
 		th.stTh();
 	}	
